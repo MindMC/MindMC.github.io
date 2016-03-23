@@ -1,52 +1,64 @@
 <!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>MindMC</title>
+		<title>The Mind of Minecraft | Home</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="icon" type="image/png" href="./favicon.ico?">
+		<link rel="stylesheet" href="assets/css/bootstrap.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="loading">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+	<body class="is-loading">
 
-				<!-- Header -->
-					<header id="header">
-						<h1>The Mind of Minecraft</h1>
-						<p>Security Chief &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp; Never asked for this</p>
-						<nav>
-							<ul>
-								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-youtube"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-donate"><span class="label">Dribbble</span></a></li>
-								//<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-								//<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		<div class="fullscreen-bg">
+			<video loop muted autoplay poster="bg.png" class="fullscreen-bg__video">
+				<source src="./images/bg.mp4" type="video/mp4">
+			</video>
+		</div>
+			<div id="wrapper">
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+							<h1>MindMC</h1>
+							<p>Small YouTuber | Minecraft Enthusiast</p>
+						</header>
+
+						<footer>
+							<ul class="icons">
+								<li>
+									<a href="https://twitter.com/TheMindofMC" class="fa-twitter">twitter</a>
+								</li>
+								
+								<li>
+									<a href="https://hypixel.net/members/mindmc.579420/" class="fa-cube">Hypixel</a>
+								</li>
+								
+								<li>
+									<a href="https://www.youtube.com/channel/UCuePnQzRtOja6G-iyZvpuNQ" class="fa-youtube">YouTube</a>
+								</li>
+								<br>
+								<li><a href="https://streamtip.com/y/UCuePnQzRtOja6G-iyZvpuNQ" class="fa-donations">Donations</a></li>
+								<!--<li><a href="http://kerbybit.github.io/ToS/" class="fa-home">Town Of Salem</a></li>-->
 							</ul>
-						</nav>
-					</header>
+						</footer>
+					</section>
 
-				<!-- Footer -->
 					<footer id="footer">
-						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+						<ul class="copyright">
+							<li>&copy; The Mind of Minecraft</li>
+						</ul>
 					</footer>
 
 			</div>
-		</div>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
+
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+			<script src="assets/js/bootstrap.js"></script>
+
 	</body>
 </html>
